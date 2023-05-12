@@ -8,19 +8,19 @@ import {IoSendSharp}  from "react-icons/io5";
 
 
 import isEmpty from "is-empty";
-import { getDataUser } from "../user/selectUser";
+import { getDataUser } from "../../redux/select/selectUser";
 import { useGetFromStore } from "../../hook/customHook";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect, useRef } from "react";
-import { setValueUser } from "../user/authReducer";
-import { getList } from "./chatReducer";
+import { setValueUser } from "../../redux/reducers/authReducer";
+import { getList } from "../../redux/reducers/chatReducer";
 import socketIOClient from "socket.io-client";
-import { getDataChat, getIsOnline } from "./selectChat";
-import { setChat } from "./chatReducer";
-import { setAlert } from "./chatReducer";
+import { getDataChat, getIsOnline } from "../../redux/select/selectChat";
+import { setChat } from "../../redux/reducers/chatReducer";
+import { setAlert } from "../../redux/reducers/chatReducer";
 
-import { setShowTab } from "./chatReducer";
-import { getDataShowTab } from "./selectChat";
+import { setShowTab } from "../../redux/reducers/chatReducer";
+import { getDataShowTab } from "../../redux/select/selectChat";
 const host = "https://blog.diaocconsole.tk";
 export default function Chat() {
     var temp = useRef(1);

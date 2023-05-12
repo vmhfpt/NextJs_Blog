@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Nav from "../layout/nav";
 import {FaAngleRight} from "react-icons/fa";
-export default function Search(){
+import CategoryService from "../../service/category.service";
+import HomeService from "../../service/home.service";
+export default function Search( {  nav, header }){
     return <section className="app-block-center app-category container-fluid">
     <div className="container">
        <div className="app-block-center_content">
@@ -65,8 +67,15 @@ export default function Search(){
                
              
            </div>
-           <Nav />
+           <Nav data={nav}/>
         </div>
     </div>
   </section>
 }
+
+export async function getServerSideProps({params}) {
+  
+   const nav = await HomeService.getNav();
+   const header = await CategoryService.index();
+   return { props: {  nav, header } };
+ }

@@ -15,7 +15,7 @@ import FooterService from "../../service/footer.service";
 import HomeService from "../../service/home.service";
 import CategoryService from "../../service/category.service";
 export default function About({ data, nav, header }){
-    console.log(data);
+   // console.log(data);
     return <section className="app-block-center app-category container-fluid">
     <div className="container">
        <div className="app-block-center_content">

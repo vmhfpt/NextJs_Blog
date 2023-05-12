@@ -5,7 +5,7 @@ import HomeService from "../../service/home.service";
 import CategoryService from "../../service/category.service";
 import PostService from "../../service/post.service";
 import { useDispatch } from "react-redux";
-import { setComments } from "../user/authReducer";
+import { setComments } from "../../redux/reducers/authReducer";
 import {
     
     FacebookShareButton,

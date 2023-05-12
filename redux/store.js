@@ -54,8 +54,8 @@ import thunk from 'redux-thunk';
 import { createWrapper } from 'next-redux-wrapper';
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import  postSlice  from '../pages/user/authReducer';
-import chatReducer from '../pages/layout/chatReducer';
+import  postSlice  from './reducers/authReducer';
+import chatReducer from './reducers/chatReducer';
 const rootReducer = combineReducers({
   example : counterSlice,
   post : postSlice,

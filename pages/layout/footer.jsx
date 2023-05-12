@@ -13,13 +13,13 @@ import { animateScroll as scroll } from 'react-scroll';
 import Chat from "./chat";
 import { useGetFromStore } from "../../hook/customHook";
 import { useState, useEffect } from "react";
-import { getDataAlert } from "./selectChat";
-import { getDataShowTab } from "./selectChat";
+import { getDataAlert } from "../../redux/select/selectChat";
+import { getDataShowTab } from "../../redux/select/selectChat";
 import { useDispatch, useSelector } from "react-redux";
-import { setShowTab } from "./chatReducer";
+import { setShowTab } from "../../redux/reducers/chatReducer";
 import Draggable from 'react-draggable';
-import { setAlert } from "./chatReducer";
-import { getDataUser } from "../user/selectUser";
+import { setAlert } from "../../redux/reducers/chatReducer";
+import { getDataUser } from "../../redux/select/selectUser";
 import isEmpty from "is-empty";
 export default function Footer(){
     const dataUser = useGetFromStore(getDataUser);
@@ -133,7 +133,7 @@ export default function Footer(){
                     <div className="col-lg-7 col-sm-12 col-md-5 ">
                         <div className="app-header__about-content">
                             <span className="footer-title">Giới thiệu</span>
-                            <p>Trang blog tâm sự, chia sẻ mẹo hay, thủ thuật lập trình, chịu trách nhiệm nội dung bài viết, bản quyền thuộc về tác giả console.log("copy and paste"). </p>
+                            <p>Trang blog tâm sự, chia sẻ mẹo hay, thủ thuật lập trình, chịu trách nhiệm nội dung bài viết, bản quyền thuộc về tác giả console.log. </p>
                             <p>BLOG AT  <a href="https://wordpress.com/">WORDPRESS.COM</a></p>
                         </div>
                     </div>

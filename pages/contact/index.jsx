@@ -1,4 +1,6 @@
-export default function Contact(){
+import CategoryService from "../../service/category.service"
+
+export default function Contact({   header }){
     return  <section className="container-fluid app-contact">
     <div className="container">
         <div className="row">
@@ -44,3 +46,8 @@ export default function Contact(){
     </div>
   </section>
 }
+export async function getServerSideProps(context) {
+
+    const header = await CategoryService.index();
+    return { props: {   header } };
+  }

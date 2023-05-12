@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { useEffect, useState, useRef  } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getDataComment } from "../user/selectUser";
+import { getDataComment } from "../../redux/select/selectUser";
 import { useGetFromStore } from "../../hook/customHook";
 import isEmpty from "is-empty";
-import { getDataUser } from "../user/selectUser";
-import { postComment } from "../user/authReducer";
-import { setValueUser } from "../user/authReducer";
+import { getDataUser } from "../../redux/select/selectUser";
+import { postComment } from "../../redux/reducers/authReducer";
+import { setValueUser } from "../../redux/reducers/authReducer";
 import socketIOClient from "socket.io-client";
 import {  Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 const host = "https://blog.diaocconsole.tk";

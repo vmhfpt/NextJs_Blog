@@ -4,10 +4,10 @@ import Logo from '../../public/logo.png';
 import {FaBars} from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { FaSignInAlt } from "react-icons/fa";
-import { getDataUser } from "../user/selectUser";
+import { getDataUser } from "../../redux/select/selectUser";
 import { useGetFromStore } from "../../hook/customHook";
 import isEmpty from "is-empty";
-import { setValueUser } from "../user/authReducer";
+import { setValueUser } from "../../redux/reducers/authReducer";
 import { useDispatch } from "react-redux";
 export default function Header({data}){
   const dispatch = useDispatch();

@@ -7,7 +7,10 @@ import {FaGithub} from "react-icons/fa";
 import {FaInstagram} from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 export default function Nav({data}){
-    const postSuggest = data.postSuggest;
+    if(!data){
+        return (<h1>null data</h1>);
+    }
+    const postSuggest = data.postSuggest ;
     const commentSuggest = data.commentSuggest;
     const categoryAll = data.categoryAll;
     const tag = data.tag;
